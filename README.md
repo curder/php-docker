@@ -1,3 +1,5 @@
+[![Build and publish packages](https://github.com/curder/php-docker/actions/workflows/packages.yml/badge.svg?branch=master)](https://github.com/curder/php-docker/actions/workflows/packages.yml)
+
 构建多平台支持的 Docker 镜像是为了确保你的应用可以在不同架构（如 x86_64、ARM）和操作系统（如 Linux、Windows）上运行。
 
 可以通过 Docker 提供的 `buildx` 工具来实现多平台镜像构建。以下是详细步骤：
