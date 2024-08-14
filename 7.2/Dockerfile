@@ -1,4 +1,4 @@
-FROM php:8.2.22-alpine
+FROM php:7.2.34-alpine
 
 # Add docker-php-extension-installer script
 ADD https://github.com/mlocati/docker-php-extension-installer/releases/latest/download/install-php-extensions /usr/local/bin/
@@ -32,7 +32,7 @@ RUN chmod +x /usr/local/bin/install-php-extensions && \
     @composer \
     redis-stable \
     imagick-stable \
-    xdebug-stable \
+    xdebug-^3.1 \
     bcmath \
     calendar \
     exif \
@@ -48,7 +48,7 @@ RUN chmod +x /usr/local/bin/install-php-extensions && \
 ENV PATH ./vendor/bin:/composer/vendor/bin:/root/.composer/vendor/bin:/usr/local/bin:$PATH
 
 # Install PHP_CodeSniffer
-RUN composer global require "squizlabs/php_codesniffer=*" "laravel/pint=*"
+RUN composer global require "squizlabs/php_codesniffer=*"
 
 # Setup working directory
 WORKDIR /var/www
