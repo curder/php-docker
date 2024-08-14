@@ -21,6 +21,10 @@ jobs:
             php: '8.2'
           - tag: '8.2.22'
             php: '8.2'
+          - tag: '7.4.33'
+            php: '7.4'
+          - tag: '7.1.33'
+            php: '7.1'
 
     steps:
       - name: Checkout code
